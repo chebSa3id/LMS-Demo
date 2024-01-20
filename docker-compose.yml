@@ -1,0 +1,21 @@
+version: "3.9"
+
+networks:
+  ME-net:
+    external: true
+
+services:
+  facility-api:
+    image: LMS-Demo-img
+    container_name: LMS-Demo
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    networks:
+      - ME-net
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker # to use appsettings.Docker.json
+      - TZ=Africa/Cairo
