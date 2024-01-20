@@ -37,15 +37,17 @@ dotnet run
 
 - Please Find the API swagger Documentation at :
   - http://localhost:5001/swagger/index.html
-- Notes: 
+- Please Find the Database Creation Script at :
+  - ./Scripts/DB.sql
+
+### Notes: 
 - The Payment cycle :
   1. hit /api/enrollment/checkout.
   2. open the URL in the response.
   3. complete the payment by any the test cards in here https://stripe.com/docs/testing.
   4. take the receiptId from the checkout response to validate payment by hitting /api/enrollment/validatepayment.
   5. if you logged in as admin you can confirm enrollment by hitting /api/enrollment/confirmenrollment.
-- Please Find the Database Creation Script at :
-  - ./Scripts/DB.sql
+
 
 # FOLDER STRUCTURE
 
